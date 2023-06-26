@@ -1,0 +1,67 @@
+const fs = require('fs');
+
+fs.readFile(${__dirname}/states.txt, (err,data) => {
+    if(err){
+        console.log("ERROR da Baiya");
+    }else{
+        console.log(data.toString());
+    }
+})
+
+const name ='ASWIN';
+console.log(__dirname="state.txt");
+const fs = require('fs');
+const inputData = 'pala pala pala bahubali';
+
+fs.writeFile(${__dirname}/file1.txt, inputData, (err) => {
+    if(err){
+        console.log("ERROR da Baiya 😔");
+    }else{
+        console.log("file created da side la paaru");
+    }
+})
+const fs = require('fs');
+
+function read(filePath){
+    return new Promise((resolve , reject)=>{
+        fs.readFile(filePath, (err , data )=>{
+            if(err){
+                reject('mudunju po olunga code podunga bro ... error uh bro ');
+            }
+            else{
+                resolve(data);
+            }
+        })
+    })  
+}
+
+
+
+function write(filePath, data){
+    return new Promise((resolve , reject)=>{
+        fs.writeFile(filePath ,data, (err,data ) => {
+            if(err){
+                reject("err");
+            }
+            else{
+                resolve(data);
+            }
+        })
+    })  
+}
+
+
+
+
+read (${__dirname}/state.txt)
+.then((data)=>{
+    console.log(data.toString());
+    const x = data.toString()+ "\n jammu"
+    return write(${__dirname}/test.txt,x)
+.then((inf)=>{
+    console.log(inf);
+})
+})
+.catch((err)=>{
+    console.log(err);
+})
