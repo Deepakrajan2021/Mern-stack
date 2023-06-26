@@ -1,0 +1,132 @@
+let s='malayalam';
+let pal=s.split('');
+pal.reverse();
+
+console.log(pal.join(""));
+
+let arr = [1,2,3,4,5];
+
+for(let key of arr){
+    console.log(key);
+}
+
+let obj1 = {
+    a:'deppak',
+    b:20,
+    C:'cse'
+}
+
+for(let key in obj1){
+    console.log(obj1);
+}
+
+let sece = ["Senthil" , "Guna" , "Velu " , "Rajan" , "Anbu"];
+let arr1 = [ 1 ,2 ,3 ,4 , 5];
+
+sece.forEach((ele) => {
+    console.log(ele);
+})
+
+let arr2 = sece.map(ele => ele.repeat(2));
+console.log(arr2);
+
+let name_obj = [
+    {
+        name : "Aswin",
+        dob : 2002
+    },
+    {
+        name : "Deepak",
+        dob : 2003
+    },
+    {
+        name : "Bala",
+        dob : 2003
+    },
+    {
+        name : "Suriya",
+        dob : 2004
+    }
+    ]
+
+let ans = name_obj.filter((ele)=>{
+    return ele.dob>2002;
+})
+    
+console.log(ans);
+
+const objcp3 = {
+    name : "sece",
+    year : "2023",
+    name : "sri eshwar",
+};
+console.log(objcp3);
+
+const obj3 = [
+    {
+        name : "ashok",
+        age : 30,
+        phno : 233452132,
+        sal : 95000
+    },
+    {
+        name : "shok",
+        age : 31,
+        phno : 1932947298,
+        sal : 21000
+    },
+    {
+        name : "hok",
+        age : 32,
+        phno : 353235,
+        sal : 26000
+
+    },
+    {
+        name : "okash",
+        age : 33,
+        phno : 429739174,
+        sal : 91000
+    },
+    {
+        name : "skhoas",
+        age : 34,
+        phno : 59274929,
+        sal : 19000
+    },
+
+];
+let salans = obj3.filter(ele => ele.sal>=25000).map(ele => {
+    return {name : ele.name , age:ele.age};
+})
+
+const abc = new promise ((resolve , reject )=>{
+    resolve ('hello');
+ });
+
+ abc 
+ .TouchEvent((value)=> {console.log(value)})
+ .catch ((error)=>{console.log('error',error)})
+ console.log(abc);
+
+console.log(JSON.stringify(user1));
+
+ const promisex = new promise((resolve)=>{
+    setTimeout(()=>{
+        resolve('resolved')
+    },4000)
+ })
+
+
+ promisex
+ .then((value)=> console.log(value))
+ .catch(()=> console.log('error'));
+console.log(salans)
+
+let arr_nums = [10 , 20 , 30 , 40 , 50 , 60 , 70];
+
+let [a1 , a2 , a3, a4, ...a5] = arr_nums;
+
+console.log( a1 , a2 , a3 , a4 );
+
+console.log(a5);
